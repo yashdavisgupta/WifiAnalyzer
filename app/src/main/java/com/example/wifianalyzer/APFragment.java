@@ -88,7 +88,7 @@ public class APFragment extends Fragment {
         List<ScanResult> results = wifiManager.getScanResults();
         Toast.makeText(getActivity(), "Access Point Scan Succeeded", Toast.LENGTH_SHORT).show();
         for (ScanResult scanResult : results) {
-            arrayList.add("SSID: " + scanResult.SSID + "\nBSSID: " + scanResult.BSSID + "\nFrequency: " + scanResult.frequency + "MHz\nSignal Strength: " + scanResult.level + "dB");
+            arrayList.add("SSID: " + scanResult.SSID + "\nCapabilities:" + scanResult.capabilities + "\nBSSID: " + scanResult.BSSID + "\nFrequency: " + scanResult.frequency + "MHz\nSignal Strength: " + scanResult.level + "dB");
             adapter.notifyDataSetChanged();
         }
         loading.setVisibility(View.GONE);
